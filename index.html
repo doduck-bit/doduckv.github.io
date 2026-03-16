@@ -1,44 +1,126 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>Portfolio</title>
+<title>Video Editor Portfolio</title>
+
 <style>
+
 body{
 margin:0;
-font-family:sans-serif;
-background:#111;
+font-family:Arial, sans-serif;
 color:white;
 text-align:center;
+background:black;
 }
 
-.container{
-max-width:900px;
-margin:auto;
-padding:40px;
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background-image:url("hero-bg.jpg");
+background-size:cover;
+background-position:center;
+position:relative;
 }
 
-iframe{
+.hero::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
 width:100%;
-height:500px;
-border:none;
+height:100%;
+background:rgba(0,0,0,0.6);
 }
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:800px;
+}
+
+.small{
+letter-spacing:3px;
+font-size:14px;
+opacity:0.8;
+}
+
+h1{
+font-size:60px;
+margin:20px 0;
+font-weight:700;
+}
+
+.subtitle{
+font-size:18px;
+opacity:0.8;
+margin-bottom:30px;
+}
+
+.button{
+border:1px solid white;
+padding:12px 30px;
+border-radius:30px;
+text-decoration:none;
+color:white;
+display:inline-block;
+transition:0.3s;
+}
+
+.button:hover{
+background:white;
+color:black;
+}
+
+.icons{
+margin-top:30px;
+font-size:20px;
+opacity:0.8;
+}
+
+.email{
+margin-top:20px;
+background:white;
+color:black;
+padding:6px 14px;
+border-radius:6px;
+display:inline-block;
+font-size:14px;
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<section class="hero">
 
-<h1>Video Editing Portfolio</h1>
-<p>Showreel</p>
+<div class="hero-content">
 
-<iframe
-src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-allowfullscreen>
-</iframe>
+<div class="small">VIDEO EDITOR</div>
+
+<h1>완성도는 절대 우연이 아닙니다.</h1>
+
+<div class="subtitle">
+치밀한 설계와 집요한 디테일의 결과입니다.
+</div>
+
+<a class="button" href="#">Work process</a>
+
+<div class="icons">
+X &nbsp; | &nbsp; YouTube &nbsp; | &nbsp; Mail
+</div>
+
+<div class="email">
+contact.lodduck@gmail.com
+</div>
 
 </div>
+
+</section>
 
 </body>
 </html>
